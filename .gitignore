@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Apple
+.DS_Store
+
+# Django
+*.sqlite3
+migrations/
