@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'singelo/css/custom_base.css' %}" rel="stylesheet">
+
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="header clearfix">
+          <h3 class="text-muted">Singelo</h3>
+        </div>
+
+        <div class="jumbotron">
+            <h2>About this Blog</h2>
+            <p class="lead">
+              This is the coolest blog :)
+            </p>
+        </div>
+
+        <ul>
+          <li>Blog Post 1 - 02/03/2010 - Luis Alves</li>
+          <li>Blog Post 2 - 02/03/2005 - Luis Alves</li>
+          <li>Blog Post 3 - 02/03/2000 - Luis Alves</li>
+          <li>Blog Post 4 - 02/03/1992 - Luis Alves</li>
+        </ul>
+
+        <footer class="footer">
+          <p>Singelo, Inc - 2017</p>
+        </footer>
+    </div>
+
+
+
+    {% block content %}
+		{% endblock content %}
+  </body>
+</html>
