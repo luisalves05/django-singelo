@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -23,16 +23,15 @@
   <body>
 
     <div class="container">
-        <div class="header clearfix">
-          <h3 class="text-muted">Singelo</h3>
+
+
+        <div class="header">
+          <img src="{% static 'singelo/images/profile_img.png' %}" class="profile_img" alt="User Image Profile">
+          <h3 class="text-muted">Luis Alves</h3>
+          <h5 class="text-muted">Developer</h5>
         </div>
 
-        <div class="jumbotron">
-            <h2>About this Blog</h2>
-            <p class="lead">
-              This is the coolest blog :)
-            </p>
-        </div>
+        <p>The coolest blog ever!</p>
 
         <ul>
           <li>Blog Post 1 - 02/03/2010 - Luis Alves</li>
