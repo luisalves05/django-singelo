@@ -4,16 +4,18 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script src="https://use.fontawesome.com/d1028471c4.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="{% static 'singelo/css/custom_base.css' %}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   		crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static 'singelo/css/custom_base.css' %}" rel="stylesheet">
+
 
     <title>
       {% block title %}
@@ -28,17 +30,22 @@
         <div class="header">
           <img src="{% static 'singelo/images/profile_img.png' %}" class="profile_img" alt="User Image Profile">
           <h3 class="text-muted">Luis Alves</h3>
-          <h5 class="text-muted">Developer</h5>
+          <h4 class="text-muted">Developer</h4>
+          <h5 class="text-muted"><i class="fa fa-envelope-o" aria-hidden="true"></i> luisalves05@gmail.com</h5>
+          <h5 class="text-muted"><i class="fa fa-location-arrow" aria-hidden="true"></i> Fortaleza - CE</h5>
+          <div class="icon-bar">
+              <a href="#" class="link-social" style="color: #2c3e50;"><i class="fa fa-github fa-3x"></i></a>
+              <a href="#" style="color: #2c3e50;"><i class="fa fa-twitter fa-3x"></i></a>
+              <a href="#" style="color: #2c3e50;"><i class="fa fa-stack-overflow fa-3x"></i></a>
+              <a href="#" style="color: #2c3e50;"><i class="fa fa-linkedin fa-3x"></i></a>
+          </div>
         </div>
+        <hr class="line-border">
 
-        <p>The coolest blog ever!</p>
+        {% block content %}
+    		{% endblock content %}
 
-        <ul>
-          <li>Blog Post 1 - 02/03/2010 - Luis Alves</li>
-          <li>Blog Post 2 - 02/03/2005 - Luis Alves</li>
-          <li>Blog Post 3 - 02/03/2000 - Luis Alves</li>
-          <li>Blog Post 4 - 02/03/1992 - Luis Alves</li>
-        </ul>
+        <hr class="line-border">
 
         <footer class="footer">
           <p>Singelo, Inc - 2017</p>
@@ -47,7 +54,6 @@
 
 
 
-    {% block content %}
-		{% endblock content %}
+
   </body>
 </html>
