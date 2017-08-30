@@ -9,13 +9,15 @@
 </h2>
 
 <h4 style="text-align: center;">
-  {{ post.post_author }} - {{ post.post_created.year}}/{{post.post_created.month}}/{{post.post_created.day }} 
+  {{ post.post_author }} - {{ post.post_created.year}}/{{post.post_created.month}}/{{post.post_created.day }}
 </h4>
 <br>
 
 <div class="container">
   <p style="text-align: center;">
-    {{ post.post_content }}
+    {% autoescape off %}
+      {{ post.post_content }}
+    {% endautoescape %} 
   </p>
 </div>
 
