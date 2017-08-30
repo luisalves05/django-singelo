@@ -10,7 +10,9 @@
 
 <ul class="list-group" style="text-align: center; list-style: none; font-size: 18px;">
   {% for post in posts %}
-    <a href="#">{{ post.post_title }}</a> <br>
+    {% ifnotequal post.post_status "draft" %}
+      <a href="http://{{ request.get_host }}/{{app_name}}/{{post.post_created.year}}/{{post.post_created.month}}/{{post.post_slug}}">{{ post.post_title }}</a> <br>
+    {% endifnotequal %}
   {% endfor %}
 </ul>
 {% endblock %}
