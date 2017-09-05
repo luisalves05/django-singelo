@@ -1,5 +1,5 @@
 # Singelo
-Singelo is a lightweight blog developed using Django framework.
+Singelo is a lightweight blog under construction using Django framework.
 
 ## Requirements
 This project was developed using Django 1.11.4 and Python 3.62.
@@ -31,8 +31,7 @@ This project was developed using Django 1.11.4 and Python 3.62.
 
 
 ## Do you want to improve it?
-
-**Clone or fork and send me a pull request, thanks!**
+Clone or fork and send me a pull request, thanks!
  
 ## License
 MIT
