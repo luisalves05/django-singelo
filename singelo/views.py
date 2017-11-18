@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from django.core.urlresolvers import resolve
-
 from django.views import View
 from .models import Post
 
@@ -8,7 +6,7 @@ from .models import Post
 class IndexView(View):
     def get(self, request):
         posts = Post.objects.all()
-        context = {"posts": posts, "app_name": resolve(request.path).app_name}
+        context = {"posts": posts, "app_name": "singelo"}
         return render(request, 'singelo/index.html', context)
 
 class PostView(View):
