@@ -33,10 +33,6 @@ This project was developed using Django 1.11.4 and Python 3.62.
 
 6. Visit http://127.0.0.1:8000/singelo/ and starting blogging :)
 
-## How it looks
-![Main Page](http://i.imgur.com/bmp74AH.png)
-
-
 ## Do you want to improve it?
 Clone or fork and send me a pull request, thanks!
  
