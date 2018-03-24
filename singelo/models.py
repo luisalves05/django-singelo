@@ -12,7 +12,8 @@ class Post(models.Model):
 
     post_id         = models.AutoField(primary_key = True)
     post_title      = models.CharField(max_length = 150, unique = True)
-    post_author     = models.ForeignKey(settings.AUTH_USER_MODEL, default = 1)
+    post_author     = models.ForeignKey(settings.AUTH_USER_MODEL, default = 1,
+                                        on_delete=models.CASCADE)
     post_created    = models.DateTimeField(auto_now_add = True)
     post_content    = models.TextField()
     post_slug       = models.SlugField(max_length = 150)
