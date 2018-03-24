@@ -4,15 +4,20 @@
 
 {% block content %}
 
-<p style="text-align: center; font-size: 20px;">
-  The coolest blog ever!
-</p>
 
 <ul class="list-group" style="text-align: center; list-style: none; font-size: 18px;">
-  {% for post in posts %}
-    {% ifnotequal post.post_status "draft" %}
-      <a href="http://{{ request.get_host }}/{{app_name}}/{{post.post_created.year}}/{{post.post_created.month}}/{{post.post_slug}}">{{ post.post_title }}</a> <br>
-    {% endifnotequal %}
-  {% endfor %}
+  <table class="table table-striped">
+    <tbody>
+      {% for post in posts %}
+        {% ifnotequal post.post_status "draft" %}
+        <tr>
+          <td>{{ post.post_created|date:"M d, Y" }}</td>
+          <td><a href="http://{{ request.get_host }}/{{app_name}}/{{post.post_created.year}}/{{post.post_created.month}}/{{post.post_slug}}">{{ post.post_title }}</a> <br></td>
+        </tr>
+        {% endifnotequal %}
+      {% endfor %}
+    </tbody>
+  </table>
+
 </ul>
 {% endblock %}
