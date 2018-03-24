@@ -2,12 +2,14 @@
 
 {% block title %} Singelo {% endblock %}
 
-{% block content %}
+{% block user_quote %} The collest blog ever {% endblock %}
 
+{% block content %}
 
 <ul class="list-group" style="text-align: center; list-style: none; font-size: 18px;">
   <table class="table table-striped">
     <tbody>
+
       {% for post in posts %}
         {% ifnotequal post.post_status "draft" %}
         <tr>

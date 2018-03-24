@@ -42,7 +42,8 @@
         </div>
 
         <p style="text-align: center; font-size: 20px;">
-          The coolest blog ever!
+          {% block user_quote %}
+          {% endblock user_quote %}
         </p>
 
         {% block content %}

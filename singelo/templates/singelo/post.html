@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<h2 style="text-align: center; font-size: 24px;">
+<h2 style="text-align: center; font-size: 44px;">
   {{ post.post_title }}
 </h2>
 
@@ -14,7 +14,7 @@
 <br>
 
 <div class="container">
-  <p style="text-align: center;">
+  <p style="text-align: center; font-size: 30px;">
     {% autoescape off %}
       {{ post.post_content }}
     {% endautoescape %}
@@ -41,7 +41,7 @@
     </script>
 
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
+
 </div>
 
 
